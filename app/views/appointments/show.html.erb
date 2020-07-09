@@ -1,0 +1,6 @@
+<h1>Appointments#show</h1>
+ 
+
+ Appointment: <%=@appointment.display_date_and_time %><br>
+ <%= link_to "#{@appointment.patient.name}", patient_path(@appointment.patient) %><br>
+ <%= link_to "#{@appointment.doctor.name}", doctor_path(@appointment.doctor) %><br>
