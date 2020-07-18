@@ -1,0 +1,12 @@
+<h1> Showing the doctors </h1>
+# displays the doctor's name, department,
+#and appointments, with each appointment's date, time, and patient name (linking to the patient's show page).
+<%= @appointment.help %>
+
+<%= @doctor.name %>
+<%= @doctor.department %>
+<%= @doctor.appointments.each do |appointment| %>
+
+<%= link_to appointment.patient.name, patient_path(appointment) %>
+<% end %>
+
